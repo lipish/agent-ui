@@ -1,0 +1,6 @@
+#!/bin/bash
+# 快速启动开发模式
+# 这是一个便捷的入口脚本，实际脚本在 scripts/ 目录
+
+./scripts/watch.sh "$@"
+

@@ -1,2 +1,4 @@
-/target
-gpui-component
+/gpui/target
+/mac/.build
+/web/node_modules
+**/.DS_Store

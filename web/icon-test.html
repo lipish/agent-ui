@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+    .icon-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .icon-box {
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .icon-box h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #666;
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-gray {
+      background: #e5e7eb;
+      color: #9ca3af;
+    }
+    .btn-blue {
+      background: #3b82f6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Icon Test</h1>
+  
+  <div class="icon-container">
+    <!-- Icon 1: Stroke version -->
+    <div class="icon-box">
+      <h3>Stroke (Gray)</h3>
+      <button class="btn-gray">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 2: Stroke version (blue) -->
+    <div class="icon-box">
+      <h3>Stroke (Blue)</h3>
+      <button class="btn-blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 3: Fill version -->
+    <div class="icon-box">
+      <h3>Fill (Gray)</h3>
+      <button class="btn-gray">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 4: Fill version (blue) -->
+    <div class="icon-box">
+      <h3>Fill (Blue)</h3>
+      <button class="btn-blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 5: Simple arrow -->
+    <div class="icon-box">
+      <h3>Arrow (Gray)</h3>
+      <button class="btn-gray">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 6: Simple arrow (blue) -->
+    <div class="icon-box">
+      <h3>Arrow (Blue)</h3>
+      <button class="btn-blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 7: Up arrow -->
+    <div class="icon-box">
+      <h3>Up Arrow (Gray)</h3>
+      <button class="btn-gray">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 8: Up arrow (blue) -->
+    <div class="icon-box">
+      <h3>Up Arrow (Blue)</h3>
+      <button class="btn-blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Icon 9: Text "Send" -->
+    <div class="icon-box">
+      <h3>Text (Gray)</h3>
+      <button class="btn-gray" style="width: auto; padding: 0 16px; font-size: 14px; font-weight: 600;">
+        Send
+      </button>
+    </div>
+
+    <!-- Icon 10: Text "Send" (blue) -->
+    <div class="icon-box">
+      <h3>Text (Blue)</h3>
+      <button class="btn-blue" style="width: auto; padding: 0 16px; font-size: 14px; font-weight: 600;">
+        Send
+      </button>
+    </div>
+  </div>
+
+  <p style="margin-top: 40px; color: #666;">
+    Open this file in a browser to test which icon displays correctly.
+  </p>
+</body>
+</html>
+

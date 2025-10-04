@@ -1,164 +1,138 @@
 # Agent UI
 
-A modular AI assistant interface built with GPUI, featuring a clean Yuanbao-inspired design.
+A modular AI assistant interface with multiple framework implementations.
 
-**Version:** 2.0.0  
+**Version:** 2.1.0
 **Status:** Active Development
-
----
-
-## ✨ Features
-
-- 🎨 **Yuanbao Style Design** - Minimalist gray and white color scheme
-- 🏗️ **Modular Architecture** - Clean separation of concerns
-- ✈️ **SVG Icons** - Heroicons integration with proper asset management
-- 📱 **Smart Positioning** - Right-aligned window with screen adaptation
-- 💬 **Message Flow** - User and assistant message display
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Rust (latest stable)
-- macOS (GPUI currently supports macOS)
-
-### Build and Run
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd agent-ui
-
-# Build
-cargo build
-
-# Run
-cargo run
-```
-
-The window will appear on the right side of your screen with a 20pt margin.
 
 ---
 
 ## 📁 Project Structure
 
+This repository contains different implementations of Agent UI:
+
 ```
 agent-ui/
-├── src/
-│   ├── lib.rs              # Library entry point
-│   ├── main.rs             # Application entry (50 lines)
-│   ├── assets.rs           # Asset management (SVG icons)
-│   ├── theme.rs            # Theme configuration
-│   ├── utils.rs            # Utility functions
-│   ├── models/             # Data models
-│   │   └── message.rs      # Message, MessageRole
-│   ├── state/              # State management
-│   │   └── conversation.rs # ConversationState
-│   └── components/         # UI components
-│       ├── assistant_panel.rs
-│       ├── message_list.rs
-│       └── message_input.rs
-├── assets/
-│   └── icons/
-│       └── paper-airplane.svg
-├── doc/                    # Documentation
-│   ├── README.md           # Documentation index
-│   ├── system-design.md    # System architecture
-│   └── ...
-└── Cargo.toml
+├── gpui/                        # GPUI framework implementation (Rust)
+│   ├── src/                     # Source code
+│   ├── scripts/                 # Development scripts
+│   ├── Cargo.toml               # Rust project config
+│   ├── dev                      # Quick start script
+│   └── README.md                # GPUI documentation
+├── web/                         # Web implementation (Svelte)
+│   ├── src/                     # Source code
+│   │   └── components/          # Svelte components
+│   ├── package.json             # Dependencies
+│   ├── dev.sh                   # Quick start script
+│   └── README.md                # Web documentation
+├── doc/                         # Documentation
+├── images/                      # Design references
+└── README.md                    # This file
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🚀 Quick Start
 
-### Modular Design
+### GPUI Version (Rust)
 
-The project follows a modular architecture with clear separation of concerns:
+Native desktop application with high performance.
 
-- **assets** - Resource loading (SVG icons, images)
-- **models** - Data structures (Message, MessageRole)
-- **state** - State management (ConversationState)
-- **theme** - UI theming (Yuanbao style)
-- **components** - UI components (Panel, List, Input)
-- **utils** - Utility functions (window positioning)
+```bash
+cd gpui
+./dev
+```
 
-### Design Principles
+See [gpui/README.md](gpui/README.md) for details.
 
-- ✅ Single Responsibility Principle (SRP)
-- ✅ Open/Closed Principle (OCP)
-- ✅ Dependency Inversion Principle (DIP)
-- ✅ Interface Segregation Principle (ISP)
+### Web Version (Svelte)
 
-See [doc/MODULAR-REFACTORING.md](doc/MODULAR-REFACTORING.md) for details.
+Modern web application with clean UI.
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`
+
+See [web/README.md](web/README.md) for details.
+
+---
+
+## ✨ Features
+
+### Common Features
+- 🎨 Clean, minimalist design
+- 💬 Message list with auto-scroll
+- ✍️ Text input with send button
+- ⌨️ Keyboard shortcuts (Enter to send)
+- 📱 9:16 aspect ratio (450×800)
+
+### GPUI Version
+- ⚡ Native performance
+- 🖥️ Desktop application
+- 🦀 Built with Rust
+- 🎯 Right-side positioning
+
+### Web Version
+- 🌐 Cross-platform
+- 📱 Responsive design
+- ⚡ Fast and lightweight
+- 🎨 Smooth animations
 
 ---
 
 ## 🎨 Design
 
-### Yuanbao Style
+- **Window Size**: 450px × 800px
+- **Aspect Ratio**: 9:16 (vertical/portrait)
+- **Color Scheme**: Clean, modern
+- **Typography**: System fonts
 
-Inspired by minimalist design, featuring:
-
-- Pure white background (`#ffffff`)
-- Light gray message bubbles (`#f5f5f5`)
-- Dark primary color (`#1a1a1a`)
-- Fully rounded input box
-- Clean, professional appearance
-
-### Window Positioning
-
-- Right-aligned with 20pt margin
-- Adapts to different screen sizes
-- 16:9 aspect ratio (600x1067)
-
----
-
-## 📚 Documentation
-
-See [doc/README.md](doc/README.md) for complete documentation index.
-
-### Key Documents
-
-- [system-design.md](doc/system-design.md) - System architecture (English)
-- [system-design_CN.md](doc/system-design_CN.md) - 系统架构 (中文)
-- [MODULAR-REFACTORING.md](doc/MODULAR-REFACTORING.md) - Modular design guide
-- [implementation-roadmap.md](doc/implementation-roadmap.md) - Development roadmap
+Design references in `images/` directory.
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **UI Framework:** [GPUI](https://github.com/zed-industries/zed) - Zed's GPU-accelerated UI framework
-- **Language:** Rust
-- **Icons:** [Heroicons](https://heroicons.com/)
-- **Async Runtime:** Tokio
+### GPUI Version
+- **Language**: Rust
+- **Framework**: GPUI (from Zed editor)
+- **Platform**: macOS (currently)
+
+### Web Version
+- **Language**: JavaScript
+- **Framework**: Svelte
+- **Build Tool**: Vite
+- **Platform**: Web browsers
 
 ---
 
-## 🗺️ Roadmap
+## 📚 Documentation
 
-### Current (v2.0.0)
-- ✅ Modular architecture
-- ✅ Yuanbao style UI
-- ✅ SVG icon support
-- ✅ Basic message flow
+- **GPUI Version**: [gpui/README.md](gpui/README.md)
+- **Web Version**: [web/README.md](web/README.md)
+- **Directory Setup**: [GPUI_DIRECTORY_SETUP.md](GPUI_DIRECTORY_SETUP.md)
+- **Root Cleanup**: [ROOT_CLEANUP_COMPLETE.md](ROOT_CLEANUP_COMPLETE.md)
 
-### Next (v2.1.0)
-- ⏳ Real text input
-- ⏳ Keyboard events (Enter to send)
-- ⏳ Scroll to bottom
+---
 
-### Future (v3.0.0)
-- 📋 Async AI responses
-- 📋 Tool call display
-- 📋 Task management
-- 📋 Markdown rendering
-- 📋 Code highlighting
+## 🎯 Roadmap
 
-See [implementation-roadmap.md](doc/implementation-roadmap.md) for details.
+### Current
+- ✅ GPUI desktop version
+- ✅ Web version with Svelte
+
+### Future
+- [ ] Tauri version (desktop + web)
+- [ ] Electron version
+- [ ] Mobile apps (React Native / Flutter)
+- [ ] Real AI backend integration
+- [ ] Authentication
+- [ ] Conversation history
+- [ ] File upload support
 
 ---
 
@@ -166,26 +140,32 @@ See [implementation-roadmap.md](doc/implementation-roadmap.md) for details.
 
 Contributions are welcome! Please:
 
-1. Read [system-design.md](doc/system-design.md) to understand the architecture
-2. Follow the modular design principles
-3. Keep documentation up to date
-4. Write clear commit messages
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
 ---
 
 ## 📄 License
 
-[Add your license here]
+MIT License
 
 ---
 
-## 🙏 Acknowledgments
+## ✨ Get Started
 
-- [GPUI](https://github.com/zed-industries/zed) - Amazing GPU-accelerated UI framework
-- [Heroicons](https://heroicons.com/) - Beautiful SVG icons
-- Yuanbao - Design inspiration
+Choose your preferred version:
 
----
+**GPUI (Native Desktop)**:
+```bash
+cd gpui && ./dev
+```
 
-**Built with ❤️ using Rust and GPUI**
+**Web (Browser)**:
+```bash
+cd web && npm install && npm run dev
+```
+
+Happy coding! 🚀
 
