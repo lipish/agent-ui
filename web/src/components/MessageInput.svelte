@@ -65,13 +65,13 @@
     <!-- 底部工具栏 - 包含所有图标 -->
     <div class="bottom-actions">
       <div class="actions-left">
-        <button class="action-button" title="Add hashtag">
+        <button class="action-button" title="引用上下文">
           <Hash size={16} />
         </button>
-        <button class="action-button" title="Attach image">
+        <button class="action-button" title="上传图片">
           <Image size={16} />
         </button>
-        <button class="action-button" title="Task list">
+        <button class="action-button" title="任务列表">
           <ListChecks size={16} />
         </button>
       </div>
@@ -80,7 +80,7 @@
           <span>Gemini-2.5-Pro</span>
           <ChevronDown size={16} style="transform: translateY(1px);" />
         </div>
-        <button class="action-button append-button" title="Append task">
+        <button class="action-button append-button" title="添加任务">
           <GitPullRequestCreate size={16} />
         </button>
         <button
@@ -88,7 +88,7 @@
           class="send-button"
           class:active={message.trim()}
           disabled={!message.trim()}
-          title="Send message"
+          title="发送"
         >
           <ArrowUp size={16} />
         </button>
