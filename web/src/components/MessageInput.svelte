@@ -55,9 +55,10 @@
         bind:value={message}
         on:keydown={handleKeyDown}
         on:input={handleInput}
-        placeholder="您正在与 Builder 聊天"
+        placeholder="请输入..."
         class="input"
         rows="3"
+        spellcheck="false"
       ></textarea>
     </div>
     
