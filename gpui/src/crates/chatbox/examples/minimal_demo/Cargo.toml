@@ -1,0 +1,14 @@
+[package]
+name = "minimal_chatbox_demo"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+# 这个配置让这个包脱离主工作区
+
+[dependencies]
+gpui = { path = "../../../gpui" }
+
+[[bin]]
+name = "minimal_demo"
+path = "src/main.rs"
